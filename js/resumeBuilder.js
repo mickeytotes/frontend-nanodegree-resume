@@ -75,26 +75,6 @@ for(job in work.jobs) {
 
 displayWork();
 
-var education = {
-	"schools": [
-	{
-		"name": "Northeastern University",
-		"location": "Boston, MA, USA",
-		"degree": "BA",
-		"major": ["Theatre"],
-		"minor": "Music Industry",
-		"dates": "2003-2007",
-		"url": "www.neu.edu"
-	}],
-	"onlineCourse": [
-	{
-		"title": "Front-End Nanodegree",
-		"school": "Udacity",
-		"dates": "February 2016 - Present",
-		"url": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
-	}]
-};
-
 var projects = {
 	"projects": [
 	{
@@ -135,14 +115,26 @@ projects.display = function() {
 
 projects.display();
 
-$(document).click(function(loc) {
-	var x = loc.pageX;
-	var y = loc.pageY;
+var education = {
+	"schools": [
+	{
+		"name": "Northeastern University",
+		"location": "Boston, MA, USA",
+		"degree": "BA",
+		"major": ["Theatre"],
+		"minor": "Music Industry",
+		"dates": "2003-2007",
+		"url": "www.neu.edu"
+	}],
+	"onlineCourse": [
+	{
+		"title": "Front-End Nanodegree",
+		"school": "Udacity",
+		"dates": "February 2016 - Present",
+		"url": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
+	}]
+};
 
-	logClicks(x,y);
-});
-
-logClicks();
 
 function inName(name) {
 	name = name.trim().split(" ");

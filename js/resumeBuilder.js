@@ -20,7 +20,7 @@ var bio = {
 	"role": "Front-End Developer",
 	"contacts": {
 		"email": "satow.m@gmail.com",
-		"phone": "914-661-0181",
+		"phone": "914.661.0181",
 		"github": "mickeytotes",
 		"twitter": "@michaelsatow",
 		"location": "NYC, NY, USA"
@@ -207,10 +207,26 @@ $("#mapDiv").append(googleMap);
 
 // footer contact
 
-//var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.phone);
-//$("#lets-connect").append(formattedMobile);
+var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.phone);
+$("#footerContacts:last").append(formattedMobile);
 
-//var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
+var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
+$("#footerContacts:last").append(formattedEmail);
+
+var formattedGitHub = HTMLgithub.replace("%data%", bio.contacts.github);
+$("#footerContacts:last").append(formattedGitHub);
+
+var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
+$("#footerContacts:last").append(formattedTwitter);
+
+var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
+$("#footerContacts:last").append(formattedLocation);
+
+//var formattedFooterContacts = formattedEmail + formattedGitHub + formattedTwitter +
+//	formattedLocation;
+//$("#lets-connect").append(formattedFooterContacts);
+
+//$("#footerContacts").append(formattedEmail);
 
 
 

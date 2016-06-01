@@ -1,3 +1,9 @@
+// TODO format and append remaining bio elements
+// TODO add picture to bio
+// TODO add real pics to projects
+// TODO format and append footer contacts
+// TODO encapsulate functions in objects
+
 var name = "Michael Satow";
 var formattedName =
 	HTMLheaderName.replace("%data%", name);
@@ -24,6 +30,8 @@ var bio = {
 	"HTML", "CSS", "Javascript"
 	]
 		};
+
+// Launch Skills section if there are any!
 
 if(bio.skills.length > 0) {
 $("#header").append(HTMLskillsStart);
@@ -121,10 +129,10 @@ var education = {
 		"name": "Northeastern University",
 		"location": "Boston, MA, USA",
 		"degree": "BA",
-		"major": ["Theatre"],
+		"major": ["Theatre", " Music Industry"],
 		"minor": "Music Industry",
 		"dates": "2003-2007",
-		"url": "www.neu.edu"
+		"url": "http://www.neu.edu"
 	}],
 	"onlineCourse": [
 	{
@@ -135,16 +143,78 @@ var education = {
 	}]
 };
 
+function displayEducation() {
+	for(school in education.schools) {
+		$("#education").append(HTMLschoolStart);
 
-function inName(name) {
-	name = name.trim().split(" ");
-	console.log(name);
-	name[1] = name[1].toUpperCase();
-	name[0] = name[0].slice(0,1).toUpperCase() +
-		name[0].slice(1).toLowerCase();
-	return name[0] +" "+name[1];
+		var formattedSchool = HTMLschoolName.replace("%data%", education.schools[school].name)
+		.replace("#", education.schools[school].url);
+		var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
+		var formattedSchoolDegree = formattedSchool + formattedDegree;
+		$("#education:last").append(formattedSchoolDegree);
+
+		var formattedSchoolDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
+		$("#education:last").append(formattedSchoolDates);
+
+		var formattedSchoolLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
+		$("#education:last").append(formattedSchoolLocation);
+
+		var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[school].major);
+		$("#education:last").append(formattedMajor);
+	}
+
+	for(course in education.onlineCourse) {
+		$("#education").append(HTMLonlineClasses);
+
+		var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourse[course].title)
+		.replace("#", education.onlineCourse[course].url);
+		var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourse[course].school);
+		var formattedTitleSchool = formattedOnlineTitle + formattedOnlineSchool;
+		$("#education:last").append(formattedTitleSchool);
+
+		var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.onlineCourse[course].dates);
+		$("#education:last").append(formattedOnlineDates);
+
+		var formattedOnlineURL = HTMLonlineURL.replace("%data%", education.onlineCourse[course].url)
+		.replace("#", education.onlineCourse[course].url);
+		$("#education:last").append(formattedOnlineURL);
+	}
 };
 
-$("#main").append(internationalizeButton);
+displayEducation();
+
+
+// function to change last name to all Uppercase. Works with the internationalize button
+
+//function inName(name) {
+//	name = name.trim().split(" ");
+//	console.log(name);
+//	name[1] = name[1].toUpperCase();
+//	name[0] = name[0].slice(0,1).toUpperCase() +
+//		name[0].slice(1).toLowerCase();
+//	return name[0] +" "+name[1];
+//};
+
+
+// Uncomment this and above function to add and Internationalize button to the resume
+
+//$("#main").append(internationalizeButton);
+
+
+// add the interactive googlemap to the resume.
 
 $("#mapDiv").append(googleMap);
+
+// footer contact
+
+//var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.phone);
+//$("#lets-connect").append(formattedMobile);
+
+//var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
+
+
+
+
+
+
+

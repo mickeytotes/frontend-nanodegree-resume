@@ -1,7 +1,6 @@
 // TODO format and append remaining bio elements
 // TODO add picture to bio
 // TODO add real pics to projects
-// TODO format and append footer contacts
 // TODO encapsulate functions in objects
 
 var name = "Michael Satow";
@@ -27,22 +26,53 @@ var bio = {
 	},
 	"welcomeMessage": "Thanks for checking out my resume!",
 	"skills": [
-	"HTML", "CSS", "Javascript"
-	]
+	"HTML", "CSS", "Javascript", "Didgeridoo"
+	],
+	"biopic": "https://pbs.twimg.com/profile_images/1349562784/glassesLookup.jpg"
 		};
+
+function displayBio() {
+	var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.phone);
+	$("#topContacts:last").append(formattedMobile);
+	var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
+	$("#topContacts:last").append(formattedEmail);
+	var formattedGitHub = HTMLgithub.replace("%data%", bio.contacts.github);
+	$("#topContacts:last").append(formattedGitHub);
+	var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
+	$("#topContacts:last").append(formattedTwitter);
+	var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
+	$("#topContacts:last").append(formattedLocation);
+
+	var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+	$("#header:last").append(formattedWelcomeMsg);
+
+	var formattedBioPic = HTMLbioPic.replace("%data%", bio.biopic);
+	$("#header:last").append(formattedBioPic);
+
+	$("#header:last").append(HTMLskillsStart);
+	for(skill in bio.skills) {
+		var formattedSkill = HTMLskills.replace("%data%", bio.skills[skill]);
+		$("#header:last").append(formattedSkill);
+	};
+
+
+
+};
+
+displayBio();
 
 // Launch Skills section if there are any!
 
-if(bio.skills.length > 0) {
-$("#header").append(HTMLskillsStart);
+//if(bio.skills.length > 0) {
+//$("#header").append(HTMLskillsStart);
 
-var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
-$("#skills").append(formattedSkill);
-formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
-$("#skills").append(formattedSkill);
-formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
-$("#skills").append(formattedSkill);
-};
+//var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
+//$("#skills").append(formattedSkill);
+//formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
+//$("#skills").append(formattedSkill);
+//formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
+//$("#skills").append(formattedSkill);
+//};
 
 var work = {
 	"jobs": [

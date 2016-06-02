@@ -1,6 +1,4 @@
 
-// TODO add real pics to projects
-// TODO encapsulate functions in objects
 // TODO add buttload of comments
 // TODO Personalize CSS
 // TODO check for extraeneous code and get rid of it
@@ -35,7 +33,7 @@ var bio = {
 	"biopic": "https://pbs.twimg.com/profile_images/1349562784/glassesLookup.jpg"
 		};
 
-function displayBio() {
+bio.display = function() {
 	var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.phone);
 	$("#topContacts:last").append(formattedMobile);
 	var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
@@ -53,14 +51,14 @@ function displayBio() {
 	var formattedBioPic = HTMLbioPic.replace("%data%", bio.biopic);
 	$("#header").append(formattedBioPic);
 
-	$("#header").append(HTMLskillsStart);
+	$("#header").append(HTMLskillsStart)
 	for(skill in bio.skills) {
 		var formattedSkill = HTMLskills.replace("%data%", bio.skills[skill]);
 		$("#header").append(formattedSkill);
 	};
-};
+}
 
-displayBio();
+bio.display();
 
 // Launch Skills section if there are any!
 
@@ -93,7 +91,7 @@ var work = {
 	}]
 };
 
-function displayWork(){
+work.display = function() {
 for(job in work.jobs) {
 	$("#workExperience").append(HTMLworkStart);
 	var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
@@ -112,7 +110,7 @@ for(job in work.jobs) {
 }
 };
 
-displayWork();
+work.display();
 
 var projects = {
 	"projects": [
@@ -175,7 +173,7 @@ var education = {
 	}]
 };
 
-function displayEducation() {
+education.display = function() {
 	for(school in education.schools) {
 		$("#education").append(HTMLschoolStart);
 
@@ -213,7 +211,7 @@ function displayEducation() {
 	}
 };
 
-displayEducation();
+education.display();
 
 
 // function to change last name to all Uppercase. Works with the internationalize button

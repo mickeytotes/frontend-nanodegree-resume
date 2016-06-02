@@ -1,10 +1,7 @@
 
-// TODO add buttload of comments
 // TODO Personalize CSS
-// TODO check for extraeneous code and get rid of it
-// TODO add photo credits?
 
-// Header Name and Role
+// **** Header Name and Role ****
 
 var name = "Michael Satow";
 var formattedName =
@@ -65,19 +62,6 @@ bio.display = function() {
 };
 
 bio.display();
-
-// Launch Skills section if there are any!
-
-//if(bio.skills.length > 0) {
-//$("#header").append(HTMLskillsStart);
-
-//var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
-//$("#skills").append(formattedSkill);
-//formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
-//$("#skills").append(formattedSkill);
-//formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
-//$("#skills").append(formattedSkill);
-//};
 
 // **** Work ****
 
@@ -183,7 +167,7 @@ var education = {
 		"dates": "2003-2007",
 		"url": "http://www.neu.edu"
 	}],
-	// TODO go back and list all individual supplemental courses
+	// TODO go back and list all individual supplemental courses when nanodegree is completed
 	"onlineCourse": [
 	{
 		"title": "Front-End Nanodegree",
@@ -274,16 +258,3 @@ $("#footerContacts:last").append(formattedTwitter);
 
 var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
 $("#footerContacts:last").append(formattedLocation);
-
-//var formattedFooterContacts = formattedEmail + formattedGitHub + formattedTwitter +
-//	formattedLocation;
-//$("#lets-connect").append(formattedFooterContacts);
-
-//$("#footerContacts").append(formattedEmail);
-
-
-
-
-
-
-

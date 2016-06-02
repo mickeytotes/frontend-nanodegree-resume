@@ -2,7 +2,6 @@
 // TODO add buttload of comments
 // TODO Personalize CSS
 // TODO check for extraeneous code and get rid of it
-// TODO go over all wording and adjust if needed
 // TODO add photo credits?
 
 var name = "Michael Satow";
@@ -51,12 +50,12 @@ bio.display = function() {
 	var formattedBioPic = HTMLbioPic.replace("%data%", bio.biopic);
 	$("#header").append(formattedBioPic);
 
-	$("#header").append(HTMLskillsStart)
+	$("#header").append(HTMLskillsStart);
 	for(skill in bio.skills) {
 		var formattedSkill = HTMLskills.replace("%data%", bio.skills[skill]);
 		$("#header").append(formattedSkill);
 	};
-}
+};
 
 bio.display();
 
@@ -87,7 +86,7 @@ var work = {
 		"title": "Front-End Web Developer",
 		"location": "NYC",
 		"dates": "February 2016 - Present",
-		"description": "I've got the world on a string. And it won't unravel."
+		"description": "Designing and building interactive, responsive websites, maintaning/administrating clients online storefronts to keep bugs out and information up to date."
 	}]
 };
 
@@ -164,6 +163,7 @@ var education = {
 		"dates": "2003-2007",
 		"url": "http://www.neu.edu"
 	}],
+	// TODO go back and list all individual supplemental courses
 	"onlineCourse": [
 	{
 		"title": "Front-End Nanodegree",

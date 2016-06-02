@@ -1,7 +1,11 @@
-// TODO format and append remaining bio elements
-// TODO add picture to bio
+
 // TODO add real pics to projects
 // TODO encapsulate functions in objects
+// TODO add buttload of comments
+// TODO Personalize CSS
+// TODO check for extraeneous code and get rid of it
+// TODO go over all wording and adjust if needed
+// TODO add photo credits?
 
 var name = "Michael Satow";
 var formattedName =
@@ -44,19 +48,16 @@ function displayBio() {
 	$("#topContacts:last").append(formattedLocation);
 
 	var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
-	$("#header:last").append(formattedWelcomeMsg);
+	$("#header").append(formattedWelcomeMsg);
 
 	var formattedBioPic = HTMLbioPic.replace("%data%", bio.biopic);
-	$("#header:last").append(formattedBioPic);
+	$("#header").append(formattedBioPic);
 
-	$("#header:last").append(HTMLskillsStart);
+	$("#header").append(HTMLskillsStart);
 	for(skill in bio.skills) {
 		var formattedSkill = HTMLskills.replace("%data%", bio.skills[skill]);
-		$("#header:last").append(formattedSkill);
+		$("#header").append(formattedSkill);
 	};
-
-
-
 };
 
 displayBio();
@@ -119,13 +120,14 @@ var projects = {
 		"title": "Portfolio",
 		"dates": "March 2016",
 		"description": "Building the shell of the website that will become my Portfolio",
-		"images": ["http://placehold.it/350x350", "http://placehold.it/351x351"]
+		"images": ["https://scontent.cdninstagram.com/t51.2885-15/s280x280/e35/12677407_2012301288994272_1550183328_n.jpg?ig_cache_key=MTIyNDg3MzUxMjU4MDAzMTAxOA%3D%3D.2",
+					"http://dw-portfolio.appspot.com/images/dw_portfolio_s.jpg"]
 	},
 	{
 		"title": "Neighborhood Map",
 		"dates": "May-June 2016",
 		"description": "Made a Neighborhood Map, y'all!",
-		"images": ["http://placehold.it/350x350", "http://placehold.it/351x351"]
+		"images": ["http://dw-resume.appspot.com/images/dw_neighborhood_s.jpg", "http://conversationagent.typepad.com/.a/6a00d8341c03bb53ef01a5118152b5970c-pi"]
 	}]
 };
 

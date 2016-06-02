@@ -160,6 +160,12 @@ img {
   padding: 10px;
 }
 
+/* Projects */
+/* resize sample web pics */
+#projects img {
+  max-height: 350px;
+}
+
 span {
   padding: 5px;
 }

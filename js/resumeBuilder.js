@@ -4,6 +4,8 @@
 // TODO check for extraeneous code and get rid of it
 // TODO add photo credits?
 
+// Header Name and Role
+
 var name = "Michael Satow";
 var formattedName =
 	HTMLheaderName.replace("%data%", name);
@@ -14,6 +16,8 @@ var formattedRole =
 
 $("#header").prepend(formattedRole);
 $("#header").prepend(formattedName);
+
+// **** Bio ****
 
 var bio = {
 	"name": "Michael Satow",
@@ -29,8 +33,11 @@ var bio = {
 	"skills": [
 	"HTML", "CSS", "Javascript", "Didgeridoo"
 	],
+// picture grabbed from my twitter account
 	"biopic": "https://pbs.twimg.com/profile_images/1349562784/glassesLookup.jpg"
 		};
+
+// encapsulates function to format and display bio object
 
 bio.display = function() {
 	var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.phone);
@@ -72,6 +79,8 @@ bio.display();
 //$("#skills").append(formattedSkill);
 //};
 
+// **** Work ****
+
 var work = {
 	"jobs": [
 	{
@@ -89,6 +98,8 @@ var work = {
 		"description": "Designing and building interactive, responsive websites, maintaning/administrating clients online storefronts to keep bugs out and information up to date."
 	}]
 };
+
+// encapsulates function to format and display work object
 
 work.display = function() {
 for(job in work.jobs) {
@@ -111,6 +122,8 @@ for(job in work.jobs) {
 
 work.display();
 
+// **** Projects ****
+
 var projects = {
 	"projects": [
 	{
@@ -119,14 +132,19 @@ var projects = {
 		"description": "Building the shell of the website that will become my Portfolio",
 		"images": ["https://scontent.cdninstagram.com/t51.2885-15/s280x280/e35/12677407_2012301288994272_1550183328_n.jpg?ig_cache_key=MTIyNDg3MzUxMjU4MDAzMTAxOA%3D%3D.2",
 					"http://dw-portfolio.appspot.com/images/dw_portfolio_s.jpg"]
+					// placeholder images of course. First image is from my instagram account.
+					// Second picture photo credit DAWOON CHOI.
 	},
 	{
 		"title": "Neighborhood Map",
 		"dates": "May-June 2016",
 		"description": "Made a Neighborhood Map, y'all!",
 		"images": ["http://dw-resume.appspot.com/images/dw_neighborhood_s.jpg", "http://conversationagent.typepad.com/.a/6a00d8341c03bb53ef01a5118152b5970c-pi"]
+		// placeholder images. First image photo credit DAWOON CHOI. Second image photo credit CONVERSATION AGENT.
 	}]
 };
+
+// encapsulates function to format and display projects object
 
 projects.display = function() {
 	for(project in projects.projects) {
@@ -152,6 +170,8 @@ projects.display = function() {
 
 projects.display();
 
+// **** Education ****
+
 var education = {
 	"schools": [
 	{
@@ -172,6 +192,8 @@ var education = {
 		"url": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
 	}]
 };
+
+// encapsulates function to format and display education object
 
 education.display = function() {
 	for(school in education.schools) {
@@ -214,7 +236,8 @@ education.display = function() {
 education.display();
 
 
-// function to change last name to all Uppercase. Works with the internationalize button
+// Uncomment this and the .append below to add Internationalize button.
+// Function to change last name to all Uppercase.
 
 //function inName(name) {
 //	name = name.trim().split(" ");
@@ -226,16 +249,16 @@ education.display();
 //};
 
 
-// Uncomment this and above function to add and Internationalize button to the resume
+// Uncomment this and above function to add an Internationalize button to the resume
 
 //$("#main").append(internationalizeButton);
 
 
-// add the interactive googlemap to the resume.
+// adds the interactive googlemap to the resume.
 
 $("#mapDiv").append(googleMap);
 
-// footer contact
+// **** Footer Contact ****
 
 var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.phone);
 $("#footerContacts:last").append(formattedMobile);

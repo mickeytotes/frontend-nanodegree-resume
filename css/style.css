@@ -190,6 +190,17 @@ img {
  margin: 20px 85px 20px 85px;
 }
 
+#education a,
+.education-entry,
+.date-text,
+.major {
+  padding-left: 57.297px;
+}
+
+.location-text {
+  padding-right: 57.297px;
+}
+
 span {
   padding: 5px;
 }

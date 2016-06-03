@@ -61,6 +61,11 @@ h5 {
 
 }
 
+#header img {
+  border: solid white 2px;
+  padding: 0;
+  margin-right: 20px;
+}
 
 .date-text {
   font-style: italic;

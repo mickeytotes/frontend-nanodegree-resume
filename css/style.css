@@ -184,7 +184,10 @@ img {
 /* Projects */
 /* resize sample web pics */
 #projects img {
-  max-height: 350px;
+ height: 300px;
+ width: 300px;
+ border: 1px solid #2d2c2c;
+ margin: 20px 85px 20px 85px;
 }
 
 span {

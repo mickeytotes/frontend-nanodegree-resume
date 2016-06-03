@@ -192,7 +192,7 @@ img {
 
 #education a,
 .education-entry,
-.date-text,
+#education .date-text,
 .major {
   padding-left: 57.297px;
 }

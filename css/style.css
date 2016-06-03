@@ -209,6 +209,11 @@ span {
   text-align: center;
 }
 
+#footerContacts {
+  background-color: #5684b7;
+  border-top: 1px solid #2d2c2c;
+}
+
 /* Media queries to handle various device widths */
 
 @media only screen and (max-width: 1024px) {

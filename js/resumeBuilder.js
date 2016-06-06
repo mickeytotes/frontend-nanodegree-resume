@@ -1,13 +1,10 @@
-
-// TODO Personalize CSS
-
 // **** Header Name and Role ****
 
 var name = "Michael Satow";
 var formattedName =
 	HTMLheaderName.replace("%data%", name);
 
-var role = "Front-End Developer"
+var role = "Front-End Developer";
 var formattedRole =
 	HTMLheaderRole.replace("%data%", role);
 

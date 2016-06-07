@@ -45,7 +45,7 @@ bio.display = function() {
     $("#header").append(formattedBioPic);
 
     $("#header").append(HTMLskillsStart);
-    for (skill in bio.skills) {
+    for (var skill in bio.skills) {
         if (bio.skills.hasOwnProperty(skill)) {
             var formattedSkill = HTMLskills.replace("%data%", bio.skills[skill]);
             $("#header").append(formattedSkill);
@@ -76,7 +76,7 @@ var work = {
 // encapsulates function to format and display work object
 
 work.display = function() {
-    for (job in work.jobs) {
+    for (var job in work.jobs) {
         if (work.jobs.hasOwnProperty(job)) {
             $("#workExperience").append(HTMLworkStart);
             var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
@@ -122,7 +122,7 @@ var projects = {
 // encapsulates function to format and display projects object
 
 projects.display = function() {
-    for (project in projects.projects) {
+    for (var project in projects.projects) {
         if (projects.projects.hasOwnProperty(project)) {
             $("#projects").append(HTMLprojectStart);
 
@@ -136,7 +136,7 @@ projects.display = function() {
             $(".project-entry:last").append(formattedDescription);
 
             if (projects.projects[project].images.length > 0) {
-                for (image in projects.projects[project].images) {
+                for ( var image in projects.projects[project].images) {
                     if (projects.projects[project].images.hasOwnProperty(image)) {
                         var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
                         $(".project-entry:last").append(formattedImage);
@@ -173,7 +173,7 @@ var education = {
 // encapsulates function to format and display education object
 
 education.display = function() {
-    for (school in education.schools) {
+    for ( var school in education.schools) {
         if (education.schools.hasOwnProperty(school)) {
             $("#education").append(HTMLschoolStart);
 
@@ -194,7 +194,7 @@ education.display = function() {
         }
     }
 
-    for (course in education.onlineCourse) {
+    for (var course in education.onlineCourse) {
         if (education.onlineCourse.hasOwnProperty(course)) {
             $("#education").append(HTMLonlineClasses);
 

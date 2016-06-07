@@ -1,3 +1,7 @@
+// TODO change all for-ins to forEach?
+// TODO append skills to #skills (figure out why that doesn't work)
+// TODO look at css review
+
 // **** Bio ****
 
 var bio = {
@@ -176,10 +180,10 @@ var education = {
         "url": "http://www.neu.edu"
     }],
     // TODO go back and list all individual supplemental courses when nanodegree is completed
-    "onlineCourse": [{
+    "onlineCourses": [{
         "title": "Front-End Nanodegree",
         "school": "Udacity",
-        "dates": "February 2016 - Present",
+        "date": "February 2016 - Present",
         "url": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
     }]
 };
@@ -213,25 +217,25 @@ education.display = function() {
         }
     }
 
-    for (var course in education.onlineCourse) {
-        if (education.onlineCourse.hasOwnProperty(course)) {
-            $("#education").append(HTMLonlineClasses);
+	$("#education").append(HTMLonlineClasses);
 
+    for (var course in education.onlineCourses) {
+        if (education.onlineCourses.hasOwnProperty(course)) {
             var formattedOnlineTitle = HTMLonlineTitle.replace
-            ("%data%", education.onlineCourse[course].title)
-                .replace("#", education.onlineCourse[course].url);
+            ("%data%", education.onlineCourses[course].title)
+                .replace("#", education.onlineCourses[course].url);
             var formattedOnlineSchool = HTMLonlineSchool.replace
-            ("%data%", education.onlineCourse[course].school);
+            ("%data%", education.onlineCourses[course].school);
             var formattedTitleSchool = formattedOnlineTitle + formattedOnlineSchool;
             $("#education").append(formattedTitleSchool);
 
             var formattedOnlineDates = HTMLonlineDates.replace
-            ("%data%", education.onlineCourse[course].dates);
+            ("%data%", education.onlineCourses[course].date);
             $("#education").append(formattedOnlineDates);
 
             var formattedOnlineURL = HTMLonlineURL.replace
-            ("%data%", education.onlineCourse[course].url)
-                .replace("#", education.onlineCourse[course].url);
+            ("%data%", education.onlineCourses[course].url)
+                .replace("#", education.onlineCourses[course].url);
             $("#education").append(formattedOnlineURL);
         }
     }

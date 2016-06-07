@@ -1,24 +1,11 @@
-// **** Header Name and Role ****
-
-var name = "Michael Satow";
-var formattedName =
-    HTMLheaderName.replace("%data%", name);
-
-var role = "Front-End Developer";
-var formattedRole =
-    HTMLheaderRole.replace("%data%", role);
-
-$("#header").prepend(formattedRole);
-$("#header").prepend(formattedName);
-
 // **** Bio ****
 
 var bio = {
     "name": "Michael Satow",
     "role": "Front-End Developer",
     "contacts": {
+        "mobile": "914.661.0181",
         "email": "satow.m@gmail.com",
-        "phone": "914.661.0181",
         "github": "mickeytotes",
         "twitter": "@michaelsatow",
         "location": "NYC, NY, USA"
@@ -32,18 +19,24 @@ var bio = {
 };
 
 // encapsulates function to format and display bio object
+// also appends contact info to the **** FOOTER ****
 
 bio.display = function() {
-    var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.phone);
-    $("#topContacts:last").append(formattedMobile);
+	var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+	$("#header").prepend(formattedRole);
+	var formattedName = HTMLheaderName.replace("%data%", bio.name);
+	$("#header").prepend(formattedName);
+
+    var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
+    $("#footerContacts, #topContacts").append(formattedMobile);
     var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
-    $("#topContacts:last").append(formattedEmail);
+    $("#footerContacts, #topContacts").append(formattedEmail);
     var formattedGitHub = HTMLgithub.replace("%data%", bio.contacts.github);
-    $("#topContacts:last").append(formattedGitHub);
+    $("#footerContacts, #topContacts").append(formattedGitHub);
     var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
-    $("#topContacts:last").append(formattedTwitter);
+    $("#footerContacts, #topContacts").append(formattedTwitter);
     var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
-    $("#topContacts:last").append(formattedLocation);
+    $("#footerContacts, #topContacts").append(formattedLocation);
 
     var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
     $("#header").append(formattedWelcomeMsg);
@@ -188,16 +181,16 @@ education.display = function() {
                 .replace("#", education.schools[school].url);
             var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[school].degree);
             var formattedSchoolDegree = formattedSchool + formattedDegree;
-            $("#education:last").append(formattedSchoolDegree);
+            $("#education").append(formattedSchoolDegree);
 
             var formattedSchoolDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
-            $("#education:last").append(formattedSchoolDates);
+            $("#education").append(formattedSchoolDates);
 
             var formattedSchoolLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
-            $("#education:last").append(formattedSchoolLocation);
+            $("#education").append(formattedSchoolLocation);
 
             var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[school].major);
-            $("#education:last").append(formattedMajor);
+            $("#education").append(formattedMajor);
         }
     }
 
@@ -209,14 +202,14 @@ education.display = function() {
                 .replace("#", education.onlineCourse[course].url);
             var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourse[course].school);
             var formattedTitleSchool = formattedOnlineTitle + formattedOnlineSchool;
-            $("#education:last").append(formattedTitleSchool);
+            $("#education").append(formattedTitleSchool);
 
             var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.onlineCourse[course].dates);
-            $("#education:last").append(formattedOnlineDates);
+            $("#education").append(formattedOnlineDates);
 
             var formattedOnlineURL = HTMLonlineURL.replace("%data%", education.onlineCourse[course].url)
                 .replace("#", education.onlineCourse[course].url);
-            $("#education:last").append(formattedOnlineURL);
+            $("#education").append(formattedOnlineURL);
         }
     }
 };
@@ -245,20 +238,3 @@ education.display();
 // adds the interactive googlemap to the resume.
 
 $("#mapDiv").append(googleMap);
-
-// **** Footer Contact ****
-
-var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.phone);
-$("#footerContacts:last").append(formattedMobile);
-
-var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
-$("#footerContacts:last").append(formattedEmail);
-
-var formattedGitHub = HTMLgithub.replace("%data%", bio.contacts.github);
-$("#footerContacts:last").append(formattedGitHub);
-
-var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
-$("#footerContacts:last").append(formattedTwitter);
-
-var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
-$("#footerContacts:last").append(formattedLocation);

@@ -172,7 +172,7 @@ var education = {
         "name": "Northeastern University",
         "location": "Boston, MA, USA",
         "degree": "BA",
-        "major": ["Theatre", " Music Industry"],
+        "majors": ["Theatre", " Music Industry"],
         "minor": "Music Industry",
         "dates": "2003-2007",
         "url": "http://www.neu.edu"
@@ -210,7 +210,7 @@ education.display = function() {
             $("#education").append(formattedSchoolLocation);
 
             var formattedMajor = HTMLschoolMajor.replace
-            ("%data%", education.schools[school].major);
+            ("%data%", education.schools[school].majors);
             $("#education").append(formattedMajor);
         }
     }

@@ -67,13 +67,10 @@ h5 {
     box-shadow: 3px 3px 3px   #2d2c2c;
 }
 
-#header li {
-    list-style-type: none;
-}
-
 #skills {
     padding-top: 0;
     padding-bottom: 0;
+    margin-top: 16px;
 }
 
 .date-text {

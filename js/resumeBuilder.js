@@ -52,7 +52,7 @@ bio.display = function() {
     for (var skill in bio.skills) {
         if (bio.skills.hasOwnProperty(skill)) {
             var formattedSkill = HTMLskills.replace("%data%", bio.skills[skill]);
-            $("#header").append(formattedSkill);
+            $("#skills").append(formattedSkill);
         }
     }
 };

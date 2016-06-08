@@ -1,6 +1,4 @@
-// TODO change all for-ins to forEach?
-// TODO append skills to #skills (figure out why that doesn't work)
-// TODO look at css review
+// TODO change all for-in loops to forEach?
 
 // **** Bio ****
 

@@ -263,3 +263,94 @@ education.display();
 // adds the interactive googlemap to the resume.
 
 $("#mapDiv").append(googleMap);
+
+// ================== scratch for refactoring ================
+
+/*
+resume-scratch.js
+
+var model = {
+    bio: {
+        "name": "Michael Satow",
+        "role": "Front-End Developer",
+        "contacts": {
+            "mobile": "914.661.0181",
+            "email": "satow.m@gmail.com",
+            "github": "mickeytotes",
+            "twitter": "@michaelsatow",
+            "location": "NYC, NY, USA"
+            },
+        "welcomeMessage": "Thanks for checking out my resume!",
+        "skills": ["HTML", "CSS", "Javascript", "Didgeridoo"],
+        // picture grabbed from my twitter account
+        "biopic": "https://pbs.twimg.com/profile_images/1349562784/glassesLookup.jpg"
+        },
+
+    work: {
+         "jobs": [{
+            "employer": "The Directors Company",
+            "title": "Actor",
+            "location": "NYC",
+            "dates": "April - June 2016",
+            "description": "Off-Broadway Play called 'A Better Place' at the Duke Theater."
+            },
+            {
+            "employer": "Freelance",
+            "title": "Front-End Web Developer",
+            "location": "NYC",
+            "dates": "February 2016 - Present",
+            "description": "Designing and building interactive, responsive websites," +
+                        " maintaning/administrating clients' online storefronts to" +
+                        "keep bugs out and information up to date."
+        }]
+    },
+
+    projects: {
+        "projects": [{
+            "title": "Portfolio",
+            "dates": "March 2016",
+            "description": "Building the shell of the website that will become my Portfolio",
+            "images": ["https://scontent.cdninstagram.com/t51.2885-15/s280x280/e35/12677407_2012301288994272_1550183328_n.jpg?ig_cache_key=MTIyNDg3MzUxMjU4MDAzMTAxOA%3D%3D.2",
+                        "http://dw-portfolio.appspot.com/images/dw_portfolio_s.jpg"]
+            // placeholder images of course. First image is from my instagram account.
+            // Second picture photo credit DAWOON CHOI.
+    }, {
+            "title": "Neighborhood Map",
+            "dates": "May-June 2016",
+            "description": "Made a Neighborhood Map, y'all!",
+            "images": ["http://dw-resume.appspot.com/images/dw_neighborhood_s.jpg",
+                    "http://conversationagent.typepad.com/.a/6a00d8341c03bb53ef01a5118152b5970c-pi"]
+            // placeholder images. First image photo credit DAWOON CHOI.
+            // second image photo credit CONVERSATION AGENT.
+        }]
+    },
+
+    education: {
+        "schools": [{
+            "name": "Northeastern University",
+            "location": "Boston, MA, USA",
+            "degree": "BA",
+            "majors": ["Theatre", " Music Industry"],
+            "minor": "Music Industry",
+            "dates": "2003-2007",
+            "url": "http://www.neu.edu"
+        }],
+    // TODO go back and list all individual supplemental courses when nanodegree is completed
+        "onlineCourses": [{
+            "title": "Front-End Nanodegree",
+            "school": "Udacity",
+            "date": "February 2016 - Present",
+            "url": "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
+        }]
+    }
+};
+
+var octopus = {
+
+};
+
+var view = {
+
+};
+
+*/
